@@ -5,6 +5,9 @@
 .logo-div img{
     width: 8%;
 }
+.nav-top{
+    display: none;
+}
 .nav-bottom{
     position: absolute;
     bottom: 0%;
@@ -21,10 +24,36 @@
 }
 
 @media screen and (min-width: 600px){
+    .logo-div{
+        justify-content: start;
+        margin-top: 10px;
+        margin-left: 10px;
+    }
     .logo-div img{
-        width: 3%;
+        width: 40px;
+       
     }
     .nav-bottom{
         display: none;
+    }
+    .nav-top{
+        display: inline;
+    }
+    .nav-top .row{
+        font-size: 20px;
+        width: 80%;
+        margin-left: 100px;
+        margin-top: -45px;
+        color: gray;
+    }
+    .search{
+        border-radius: 20px;
+    }
+    .search :focus{
+        background-color: #491cff;
+    }
+    .selected{
+        color: #491cff;
+        font-weight: bold;
     }
 }
