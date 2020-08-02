@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div class="logo-div">
+    <img src="{% static 'images/logo.png' %}" alt="">
+
+</div>
+<div class="nav-bottom">
+    <div class="row">
+        <div class="col-4">
+            <div class="row">
+                <div class="col">
+                    <span class="material-icons">home</span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col nav-txt">
+                    Home
+                </div>
+            </div>
+            
+           
+        </div>
+        <div class="col-4">
+            <div class="row">
+                <div class="col">
+                    <span class="material-icons">search</span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col nav-txt">
+                    Search
+                </div>
+            </div>           
+        </div>
+        <div class="col-4">
+            <div class="row">
+                <div class="col">
+                    <span class="material-icons">map</span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col nav-txt">
+                    Discover
+                </div>
+            </div>
+            
+           
+        </div>
+    </div>
+</div>
+{% endblock %}
