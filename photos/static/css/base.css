@@ -22,6 +22,10 @@
 .nav-txt{
     margin-top: -8px;
 }
+.selected{
+    color: #491cff;
+    font-weight: bold;
+}
 
 @media screen and (min-width: 600px){
     .logo-div{
@@ -52,8 +56,5 @@
     .search :focus{
         background-color: #491cff;
     }
-    .selected{
-        color: #491cff;
-        font-weight: bold;
-    }
+    
 }
