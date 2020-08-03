@@ -1,5 +1,90 @@
 {%extends 'base.html' %}
 {% block content%}
-{% include 'header.html' %}
-This is now the meat section
+{% load static %}
+{% block styles %}
+<link rel="stylesheet" href="{% static 'css/home.css' %}">
+{% endblock%}
+<div class="container home">
+    <div class="images">
+        
+        <div class="image">
+            <div class="img-div">
+                <img src=" {% static 'images/matt.jpg' %}" alt="">
+                <div class="more">
+                    <span class="material-icons more-icon">more_horiz</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="image">
+            <div class="img-div">
+                <img src=" {% static 'images/minimalist.jpg' %}" alt="">
+                <div class="more">
+                    <span class="material-icons more-icon">more_horiz</span>
+                </div>
+            </div>
+            
+        </div>
+        <div class="image">
+            <div class="img-div">
+                <img src=" {% static 'images/mattyum.jpg' %}" alt="">
+                <div class="more">
+                    <span class="material-icons more-icon">more_horiz</span>
+                </div>
+            </div>
+            
+        </div>
+        <div class="image">
+            <div class="img-div">
+                <img src=" {% static 'images/pete.jpg' %}" alt="">
+                <div class="more">
+                    <span class="material-icons more-icon">more_horiz</span>
+                </div>
+            </div>
+            
+        </div>
+        <div class="image">
+            <div class="img-div">
+                <img src=" {% static 'images/matt.jpg' %}" alt="">
+                <div class="more">
+                    <span class="material-icons more-icon">more_horiz</span>
+                </div>
+            </div>
+            
+        </div>
+        <div class="image">
+            <div class="img-div">
+                <img src=" {% static 'images/minimalist.jpg' %}" alt="">
+                <div class="more">
+                    <span class="material-icons more-icon">more_horiz</span>
+                </div>
+            </div>
+            
+        </div>
+        <div class="image">
+            <div class="img-div">
+                <img src=" {% static 'images/mattyum.jpg' %}" alt="">
+                <div class="more">
+                    <span class="material-icons more-icon">more_horiz</span>
+
+                </div>
+            </div>
+            
+        </div>
+        <div class="image">
+            <div class="img-div">
+                <img src=" {% static 'images/pete.jpg' %}" alt="">
+                <div class="more">
+                    <span class="material-icons more-icon"><a tabindex="0" data-toggle="popover" data-trigger="focus"  title="Popover title" data-content="And here's some amazing content. It's very engaging. Right?">more_horiz</a></span>
+                </div>
+            </div>            
+        </div>
+    </div>
+</div>
+
+{% block scripts %}
+    <script src="{% static 'js/home.js' %}"></script>
 {% endblock %}
+
+{% endblock %}
+

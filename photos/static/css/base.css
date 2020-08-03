@@ -1,20 +1,28 @@
+body{
+    background-color: #fffbfe;
+}
 .logo-div{
     display: flex;
     justify-content: center;
+    
 }
 .logo-div img{
     width: 8%;
+    background-color: white;
+    
 }
+
 .nav-top{
     display: none;
 }
 .nav-bottom{
-    position: absolute;
+    position: fixed;
     bottom: 0%;
     width: 100%;
     text-align: center;    
     font-size: 16px;
     z-index: 100;
+    background-color: white;
 }
 .nav-bottom .row{
     margin: 0% !important;
@@ -32,6 +40,9 @@
         justify-content: start;
         margin-top: 10px;
         margin-left: 10px;
+        position: fixed;
+        width: initial;
+        z-index: 200;
     }
     .logo-div img{
         width: 40px;
@@ -42,16 +53,22 @@
     }
     .nav-top{
         display: inline;
+        position: fixed;
+        width: 100%;
+        background-color: white;
+        z-index: 100;
+        
     }
     .nav-top .row{
         font-size: 20px;
         width: 80%;
         margin-left: 100px;
-        margin-top: -45px;
+        margin-top: 20px;
         color: gray;
     }
     .search{
         border-radius: 20px;
+        margin-bottom: 10px;
     }
     .search :focus{
         background-color: #491cff;
