@@ -35,5 +35,15 @@ $(document).ready(()=>{
     window.location.href = '/discover'
   })
 
-      
+
+  let share = document.getElementById('share-btn')
+  let copy_text = document.getElementById('copy_text')
+
+  share.addEventListener('click', ()=>{
+    to_copy = share.getAttribute('data-link')
+    copy_text.select()
+    copy_text.setSelectionRange(0, 99999)
+    document.execCommand('copy')
+    console.log(copy_text)
+  })
 })

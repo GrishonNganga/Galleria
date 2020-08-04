@@ -8,8 +8,9 @@ def index(request):
     return render(request, 'home.html', {'images': all_images})
 
 def show_image(request, id):
-    image = Image.get_image(id)
-    return render(request, 'photo.html', {'image': image})
+    image = Image.get_image(id)    
+    link=request.build_absolute_uri()
+    return render(request, 'photo.html', {'image': image, 'link': link})
 
 def search(request):
     if 'image' in request.GET and request.GET['image']:
