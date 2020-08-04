@@ -28,11 +28,17 @@ class Tag(models.Model):
         for field in fields:
             if dir(self).count(field) > 0:
                 setattr(self, field, fields.get(field))
-    def __str__(self):
-        return self.name
 
     def delete_tag(self):
         self.delete()
+
+    @classmethod
+    def get_all_tags(cls):
+        return Tag.objects.all()
+
+
+    def __str__(self):
+        return self.name
 
 class Image(models.Model):
     name = models.CharField(max_length=50)
@@ -66,6 +72,12 @@ class Image(models.Model):
         image = Image.objects.filter(id=id)
         
         return image[0]
+
+    @classmethod
+    def search_image_by_keyword(cls, keyword):
+        return Image.objects.filter(name__icontains=keyword)
+
+
 
     @classmethod 
     def search_image_by_tag(cls, tag):

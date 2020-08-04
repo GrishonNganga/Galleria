@@ -6,14 +6,14 @@
 <div class="nav-top">
     <div class="row">
         <div class="col-2 selected">
-            Home
+            <span class="home-route">Home</span>
         </div>
         <div class="col-2">
-            Discover
+            <span class="disco-route">Discover</span>
         </div>  
         <div class="col">
             <form action="/search">
-                <input class="form-control search" type="text" placeholder="Search" aria-label="Search">
+                <input class="form-control search" type="text" id="search" name="image" placeholder="Search" aria-label="Search">
             </form>
             
         </div>
@@ -23,7 +23,7 @@
 
 <div class="nav-bottom">
     <div class="row">
-        <div class="col-4 selected home-nav">
+        <div class="col-4 selected home-route home-nav">
             <div class="row">
                 <div class="col">
                     <span class="material-icons">home</span>
@@ -37,7 +37,7 @@
             
            
         </div>
-        <div class="col-4 search-nav">
+        <div class="col-4 search-route search-nav">
             <div class="row">
                 <div class="col">
                     <span class="material-icons">search</span>
@@ -49,7 +49,7 @@
                 </div>
             </div>           
         </div>
-        <div class="col-4 map-nav">
+        <div class="col-4 disco-route map-nav">
             <div class="row">
                 <div class="col">
                     <span class="material-icons">map</span>

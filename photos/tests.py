@@ -36,6 +36,13 @@ class TestTag(TestCase):
         self.assertIs(all_tags, 1)
         self.assertIs(updated_tags, 0)
 
+    def test_get_all_tags(self):
+        self.a_tag.save_tag()
+
+        tags = Tag.get_all_tags()
+
+        self.assertEqual(len(tags), 1)
+
     def tearDown(self):
         self.a_tag = None
         Tag.objects.all().delete()
@@ -128,6 +135,13 @@ class TestImage(TestCase):
 
         self.assertIs(len(all_images), 1)
         
+    def test_search_images_by_keyword(self):
+        self.an_image.save_image(self.a_tag)
+
+        images = Image.search_image_by_keyword('H')
+
+        self.assertEqual(len(images), 1)
+
 
     def test_get_image_by_id(self):
         self.an_image.save_image(self.a_tag)

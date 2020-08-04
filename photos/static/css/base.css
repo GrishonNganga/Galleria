@@ -11,6 +11,9 @@ body{
     background-color: white;
     
 }
+.home-route, .disco-route, .search-route{
+    cursor: pointer;
+}
 
 .nav-top{
     display: none;
@@ -33,6 +36,10 @@ body{
 .selected{
     color: #491cff;
     font-weight: bold;
+}
+.default{
+    color: gray;
+    font-weight: normal;
 }
 
 @media screen and (min-width: 600px){

@@ -18,12 +18,15 @@ from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
 
-from photos.views import index, show_image
+from photos.views import index, show_image, search, discover, images_by_tag
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', index, name='index'),
-    path('photo/<int:id>', show_image, name='show_image')
+    path('photo/<int:id>', show_image, name='show_image'),
+    path('search', search, name='search'),
+    path('discover', discover, name='discover'),
+    path('tag/<int:id>', images_by_tag, name='images_by_tag')
 ]
 if settings.DEBUG:
     urlpatterns+= static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)
