@@ -47,13 +47,15 @@
     }
     .image img{
         position: relative;
+        box-shadow: 3px 3px 10px lightgray;
+
     }
     
     .more{
         display: none;
     }
     
-    .more:hover, .image img:hover + .more{
+    .more:hover,  .image a:hover + .more{
         display: block;
     }
 

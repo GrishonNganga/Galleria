@@ -1,5 +1,4 @@
 {% load static %}
-{% block content %}
 <div class="logo-div">
     <img src="{% static 'images/logo.png' %}" alt="">
 
@@ -13,7 +12,10 @@
             Discover
         </div>  
         <div class="col">
-            <input class="form-control search" type="text" placeholder="Search" aria-label="Search">
+            <form action="/search">
+                <input class="form-control search" type="text" placeholder="Search" aria-label="Search">
+            </form>
+            
         </div>
     </div>
 
@@ -63,4 +65,3 @@
         </div>
     </div>
 </div>
-{% endblock %}

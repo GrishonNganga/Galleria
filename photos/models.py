@@ -58,6 +58,10 @@ class Image(models.Model):
         self.save()
 
     @classmethod
+    def get_all_images(cls):
+        return Image.objects.all()
+
+    @classmethod
     def get_image(cls, id):
         image = Image.objects.filter(id=id)
         

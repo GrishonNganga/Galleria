@@ -121,6 +121,13 @@ class TestImage(TestCase):
         self.assertEqual(self.an_image.name, 'Jaganot')
         self.assertEqual(self.an_image.description, 'KoolAid my lads!')
         
+    def test_get_images(self):
+        self.an_image.save_image(self.a_tag)
+
+        all_images = Image.get_all_images()
+
+        self.assertIs(len(all_images), 1)
+        
 
     def test_get_image_by_id(self):
         self.an_image.save_image(self.a_tag)

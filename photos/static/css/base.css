@@ -67,7 +67,7 @@ body{
         color: gray;
     }
     .search{
-        border-radius: 20px;
+        border-radius: 20px !important;
         margin-bottom: 10px;
     }
     .search :focus{
