@@ -6,7 +6,7 @@ A platform for sharing photos and experiences from places around the world.
 
 ## Description
 
-A user can:\
+A user can:
 * View photos based on their interests
 * View larger version of the images they wish to check out and read about.
 * Search for photos based on their tags or names.
