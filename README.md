@@ -25,6 +25,13 @@ A user can:
 * Create `.env` file and add your environment variables.
 * Make migrations for the database `python manage.py migrate`
 * If everything else is good. Run the application. `python manage.py runserver`
+
+### Testing
+
+To run tests `python manage.py test`\
+For test coverage run `coverage run manage.py test`\
+To view test coverage on the browser. `coverage html` then navigate the coverage folder generated and open `index.html` on the browser.\
+
 ## Known Bugs
 
 There are no known bugs atm. Get in touch if you discover any.
