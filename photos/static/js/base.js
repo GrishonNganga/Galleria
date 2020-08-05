@@ -35,6 +35,12 @@ $(document).ready(()=>{
     window.location.href = '/discover'
   })
 
+  if (window.location.pathname == '/'){
+    $('.home-route').addClass('selected')
+  }else if (window.location.pathname == '/discover'){
+    $('.disco-route').addClass('selected')
+  }
+
 
   let share = document.getElementById('share-btn')
   let copy_text = document.getElementById('copy_text')
