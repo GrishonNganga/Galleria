@@ -77,5 +77,6 @@
     }    
     .more:hover,  .image a:hover + .more{
         display: block;
+        cursor: pointer;
     }
 }
