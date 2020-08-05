@@ -41,7 +41,14 @@ body{
     color: gray;
     font-weight: normal;
 }
+.dropdown-menu a{
+    color: rebeccapurple;
+}
 
+.btn-primary, .btn-primary:active, .btn-primary:focus, .btn-primary:hover{
+    background-color: #491cff !important;
+    border-color: #491cff !important;
+}
 @media screen and (min-width: 600px){
     .logo-div{
         justify-content: start;
@@ -79,6 +86,10 @@ body{
     }
     .search :focus{
         background-color: #491cff;
+    }
+    .round-border{
+        border-radius: 20px !important;
+        text-align: center;
     }
     
 }

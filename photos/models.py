@@ -11,6 +11,11 @@ class Location(models.Model):
             if dir(self).count(field) > 0:
                 setattr(self, field, fields.get(field))
 
+    @classmethod
+    def get_all_locations(cls):
+        return Location.objects.all()
+
+
     def delete_location(self):
         self.delete()
 

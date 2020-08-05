@@ -18,7 +18,7 @@ from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
 
-from photos.views import index, show_image, search, discover, images_by_tag
+from photos.views import index, show_image, search, discover, images_by_tag, images_by_location
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -26,7 +26,8 @@ urlpatterns = [
     path('photo/<int:id>', show_image, name='show_image'),
     path('search', search, name='search'),
     path('discover', discover, name='discover'),
-    path('tag/<int:id>', images_by_tag, name='images_by_tag')
+    path('tag/<int:id>', images_by_tag, name='images_by_tag'),
+    path('location/<int:id>', images_by_location, name='images_by_tag')
 ]
 if settings.DEBUG:
     urlpatterns+= static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)

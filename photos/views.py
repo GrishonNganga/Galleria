@@ -1,11 +1,13 @@
 from django.shortcuts import render
-from .models import Image, Tag
+from .models import Image, Tag, Location
 
 # Create your views here.
 def index(request):
     all_images = Image.get_all_images()
+    all_tags = Tag.get_all_tags()
+    all_locations = Location.get_all_locations()
 
-    return render(request, 'home.html', {'images': all_images})
+    return render(request, 'home.html', {'images': all_images, 'tags': all_tags, 'locations': all_locations})
 
 def show_image(request, id):
     image = Image.get_image(id)    
@@ -26,5 +28,10 @@ def discover(request):
 
 def images_by_tag(request, id):
     images=Image.search_image_by_tag(id)
+
+    return render(request, 'home.html', {'images': images})
+
+def images_by_location(request, id):
+    images=Image.search_image_by_location(id)
 
     return render(request, 'home.html', {'images': images})

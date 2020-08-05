@@ -11,13 +11,20 @@
         <div class="col-2">
             <span class="disco-route">Discover</span>
         </div>  
-        <div class="col-7">
+        <div class="col">
             <form action="/search">
                 <input class="form-control search" type="text" id="search" name="image" placeholder="Search" aria-label="Search">
             </form>
         </div>
-        <div class="col">
-            Dropdown
+        <div class="dropdown">
+            <button class="btn btn-primary dropdown-toggle round-border" type="button" data-toggle="dropdown">Select Location
+            <span class="caret"></span></button>
+            <ul class="dropdown-menu">
+                {% for location in locations %}
+                <li><a href="location/{{location.id}}">{{location.name}}</a></li>
+                {% endfor %}
+            
+            </ul>
         </div>
     </div>
 

@@ -82,6 +82,13 @@ class TestLocation(TestCase):
         self.assertIs(all_locations, 1)
         self.assertIs(updated_locations, 0)
 
+    def test_get_image_by_location(cls):
+        self.a_location.save_location()
+
+        locations = Location.get_all_locations()
+
+        self.assertEqual(len(locations), 1)
+        
 
     def tearDown(self):
         self.a_location = None
