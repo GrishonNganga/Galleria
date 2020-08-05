@@ -22,6 +22,7 @@ A user can:
 * Clone the repo `git clone https://github.com/GrishonNganga/Galleria.git`
 * Move into the directory `cd Galleria`
 * Create a virtual environment `python -m venv virtual`
+* Install all dependencies with `pip install -r requirements.txt`
 * Create `.env` file and add your environment variables.
 * Make migrations for the database `python manage.py migrate`
 * If everything else is good. Run the application. `python manage.py runserver`
